@@ -37,7 +37,6 @@ class IntroPage extends StatelessWidget {
               child: Image.asset(
                 IntroConstants.introImage,
                 height: MediaQuery.of(context).size.height * .25,
-                color: const Color.fromARGB(255, 156, 223, 214),
               ),
             ),
             const SizedBox(

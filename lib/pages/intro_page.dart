@@ -34,7 +34,11 @@ class IntroPage extends StatelessWidget {
 
             Padding(
               padding: const EdgeInsets.all(50.0),
-              child: Image.asset(IntroConstants.introImage),
+              child: Image.asset(
+                IntroConstants.introImage,
+                height: MediaQuery.of(context).size.height * .25,
+                color: const Color.fromARGB(255, 156, 223, 214),
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -43,16 +47,20 @@ class IntroPage extends StatelessWidget {
             Text(
               IntroConstants.introTitle,
               style: GoogleFonts.dmSerifDisplay(
-                fontSize: 44,
+                fontSize: 30,
                 color: Colors.white,
               ),
+            ),
+
+            const SizedBox(
+              height: 10,
             ),
 
             // subtittle
             const Text(
               IntroConstants.introSubtitle,
               style: TextStyle(
-                color: Color.fromARGB(255, 235, 201, 201),
+                color: Color.fromARGB(255, 207, 207, 207),
                 height: 2,
               ),
             ),

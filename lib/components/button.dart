@@ -4,7 +4,11 @@ import 'package:groceries/constants/intro_page_constant.dart';
 class MyButton extends StatelessWidget {
   final String text;
   final void Function()? onTap;
-  const MyButton({super.key, required this.text, required this.onTap});
+  const MyButton({
+    super.key,
+    required this.text,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {

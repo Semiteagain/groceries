@@ -8,4 +8,5 @@ class IntroConstants {
   static const String introSubtitle =
       "Buy food or groceries online easly only with mobile phone";
   static const String introImage = 'lib/images/vegetable.png';
+  static const String promoImage = 'lib/images/orange.png';
 }

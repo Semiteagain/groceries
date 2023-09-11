@@ -17,7 +17,7 @@ class IntroPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const SizedBox(
-              height: 25,
+              height: 20,
             ),
 
             Text(
@@ -29,7 +29,7 @@ class IntroPage extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: 25,
+              height: 20,
             ),
 
             Padding(
@@ -65,7 +65,7 @@ class IntroPage extends StatelessWidget {
             ),
 
             const SizedBox(
-              height: 25,
+              height: 20,
             ),
 
             MyButton(

@@ -31,15 +31,18 @@ class _MenuPageState extends State<MenuPage> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             decoration: BoxDecoration(
                 color: primaryColor, borderRadius: BorderRadius.circular(20)),
             margin: const EdgeInsets.symmetric(horizontal: 25),
-            padding: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(25),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Get 30% Promo",
@@ -56,10 +59,46 @@ class _MenuPageState extends State<MenuPage> {
                       onTap: () {},
                     ),
                   ],
-                )
+                ),
+                Image.asset(
+                  IntroConstants.promoImage,
+                  height: 75,
+                ),
               ],
             ),
-          )
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: TextField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.white),
+                      borderRadius: BorderRadius.circular(20))),
+            ),
+          ),
+          const SizedBox(
+            height: 25,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Text(
+              'Fruit menu',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: Colors.grey[800]),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
         ],
       ),
     );

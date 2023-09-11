@@ -27,6 +27,15 @@ class _MenuPageState extends State<MenuPage> {
           ),
         ),
       ),
+      body: Column(
+        children: [
+          Container(
+            child: Row(
+              children: [Text('Get 30% Promo')],
+            ),
+          )
+        ],
+      ),
     );
   }
 }

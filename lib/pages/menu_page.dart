@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceries/components/button.dart';
 import 'package:groceries/constants/intro_page_constant.dart';
+import 'package:groceries/models/fruits.dart';
 import 'package:groceries/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -12,6 +13,30 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
+  //  fruit menu
+  List fruitMenu = [
+    Fruit(
+        name: 'Cauli Flower',
+        price: '29.00',
+        imgPath: 'lib/images/cauliflower.png',
+        rating: '4.8'),
+    Fruit(
+        name: 'Grape',
+        price: '25.00',
+        imgPath: 'lib/image/grape.png',
+        rating: '4.7'),
+    Fruit(
+        name: 'Orange',
+        price: "23.00",
+        imgPath: 'lib/images/orange.png',
+        rating: '4.6'),
+    Fruit(
+        name: 'Vegatables',
+        price: '28.00',
+        imgPath: 'lib/images/vegetable.png',
+        rating: '4.7'),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

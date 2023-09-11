@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:groceries/components/button.dart';
 import 'package:groceries/constants/intro_page_constant.dart';
+import 'package:groceries/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -30,8 +33,31 @@ class _MenuPageState extends State<MenuPage> {
       body: Column(
         children: [
           Container(
+            decoration: BoxDecoration(
+                color: primaryColor, borderRadius: BorderRadius.circular(20)),
+            margin: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.all(20),
             child: Row(
-              children: [Text('Get 30% Promo')],
+              children: [
+                Column(
+                  children: [
+                    Text(
+                      "Get 30% Promo",
+                      style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    MyButton(
+                      text: "Redeem",
+                      onTap: () {},
+                    ),
+                  ],
+                )
+              ],
             ),
           )
         ],

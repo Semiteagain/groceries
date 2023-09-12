@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:groceries/components/button.dart';
+import 'package:groceries/components/fruit_tile.dart';
 import 'package:groceries/constants/intro_page_constant.dart';
 import 'package:groceries/models/fruits.dart';
 import 'package:groceries/theme/colors.dart';
@@ -23,7 +24,7 @@ class _MenuPageState extends State<MenuPage> {
     Fruit(
         name: 'Grape',
         price: '25.00',
-        imgPath: 'lib/image/grape.png',
+        imgPath: 'lib/images/grape.png',
         rating: '4.7'),
     Fruit(
         name: 'Orange',
@@ -124,6 +125,17 @@ class _MenuPageState extends State<MenuPage> {
           const SizedBox(
             height: 10,
           ),
+          Expanded(
+              child: Padding(
+            padding: const EdgeInsets.only(left: 25.0),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: fruitMenu.length,
+              itemBuilder: (context, index) => FruitTile(
+                fruit: fruitMenu[index],
+              ),
+            ),
+          ))
         ],
       ),
     );

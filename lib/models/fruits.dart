@@ -4,7 +4,7 @@ class Fruit {
   String imgPath;
   String rating;
 
-  fruit({
+  Fruit({
     required this.name,
     required this.price,
     required this.imgPath,

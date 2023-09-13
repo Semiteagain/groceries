@@ -148,30 +148,40 @@ class _MenuPageState extends State<MenuPage> {
             padding: const EdgeInsets.all(20),
             child: Row(
               children: [
-                Image.asset(
-                  IntroConstants.introImage,
-                  height: 60,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Vegetables',
-                      style: GoogleFonts.dmSerifDisplay(
-                        fontSize: 18,
-                      ),
+                    Image.asset(
+                      IntroConstants.introImage,
+                      height: 60,
                     ),
-                    const SizedBox(
-                      height: 10,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Vegetables',
+                          style: GoogleFonts.dmSerifDisplay(
+                            fontSize: 18,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          '\$20',
+                          style: TextStyle(
+                            color: Colors.grey[700],
+                          ),
+                        )
+                      ],
                     ),
-                    Text(
-                      '\$20',
-                      style: TextStyle(
-                        color: Colors.grey[700],
-                      ),
-                    )
                   ],
-                )
+                ),
+                const Icon(
+                  Icons.favorite_outline,
+                  color: Colors.grey,
+                  size: 28,
+                ),
               ],
             ),
           )

@@ -126,16 +126,55 @@ class _MenuPageState extends State<MenuPage> {
             height: 10,
           ),
           Expanded(
-              child: Padding(
-            padding: const EdgeInsets.only(left: 25.0),
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: fruitMenu.length,
-              itemBuilder: (context, index) => FruitTile(
-                fruit: fruitMenu[index],
+            child: Padding(
+              padding: const EdgeInsets.only(left: 25.0),
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: fruitMenu.length,
+                itemBuilder: (context, index) => FruitTile(
+                  fruit: fruitMenu[index],
+                ),
               ),
             ),
-          ))
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.grey[100],
+                borderRadius: BorderRadius.circular(20)),
+            margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+            padding: const EdgeInsets.all(20),
+            child: Row(
+              children: [
+                Image.asset(
+                  IntroConstants.introImage,
+                  height: 60,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Vegetables',
+                      style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 18,
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    Text(
+                      '\$20',
+                      style: TextStyle(
+                        color: Colors.grey[700],
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

@@ -22,11 +22,11 @@ class FruitTile extends StatelessWidget {
         children: [
           Image.asset(
             fruit.imgPath,
-            height: 140,
+            height: 80,
           ),
           Text(
             fruit.name,
-            style: GoogleFonts.dmSerifDisplay(fontSize: 20),
+            style: GoogleFonts.dmSerifDisplay(fontSize: 18),
           ),
           SizedBox(
             width: 160,
@@ -45,6 +45,9 @@ class FruitTile extends StatelessWidget {
                     Icon(
                       Icons.star,
                       color: Colors.yellow[900],
+                    ),
+                    SizedBox(
+                      width: 25,
                     ),
                     Text(
                       fruit.rating,

@@ -126,19 +126,16 @@ class _MenuPageState extends State<MenuPage> {
             height: 10,
           ),
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.only(left: 25.0),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: fruitMenu.length,
-                itemBuilder: (context, index) => FruitTile(
-                  fruit: fruitMenu[index],
-                ),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: fruitMenu.length,
+              itemBuilder: (context, index) => FruitTile(
+                fruit: fruitMenu[index],
               ),
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 25,
           ),
           Container(
             decoration: BoxDecoration(
@@ -147,13 +144,16 @@ class _MenuPageState extends State<MenuPage> {
             margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
             padding: const EdgeInsets.all(20),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Image.asset(
                       IntroConstants.introImage,
-                      height: 60,
+                      height: 40,
+                    ),
+                    const SizedBox(
+                      width: 20,
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -165,7 +165,7 @@ class _MenuPageState extends State<MenuPage> {
                           ),
                         ),
                         const SizedBox(
-                          height: 10,
+                          height: 5,
                         ),
                         Text(
                           '\$20',

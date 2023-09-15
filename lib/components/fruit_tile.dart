@@ -19,14 +19,15 @@ class FruitTile extends StatelessWidget {
       margin: const EdgeInsets.only(left: 25),
       padding: const EdgeInsets.all(25),
       child: Column(
+        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Image.asset(
             fruit.imgPath,
-            height: 80,
+            height: 40,
           ),
           Text(
             fruit.name,
-            style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+            style: GoogleFonts.dmSerifDisplay(fontSize: 15),
           ),
           SizedBox(
             width: 160,
@@ -46,12 +47,9 @@ class FruitTile extends StatelessWidget {
                       Icons.star,
                       color: Colors.yellow[900],
                     ),
-                    SizedBox(
-                      width: 25,
-                    ),
                     Text(
                       fruit.rating,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.grey,
                       ),
                     ),

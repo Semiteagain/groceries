@@ -4,6 +4,7 @@ import 'package:groceries/components/button.dart';
 import 'package:groceries/components/fruit_tile.dart';
 import 'package:groceries/constants/intro_page_constant.dart';
 import 'package:groceries/models/fruits.dart';
+import 'package:groceries/pages/fruit_details_page.dart';
 import 'package:groceries/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -37,6 +38,17 @@ class _MenuPageState extends State<MenuPage> {
         imgPath: 'lib/images/vegetable.png',
         rating: '4.7'),
   ];
+
+  void navigateToFruitDetails(int index) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FruitDetailsPage(
+          fruit: fruitMenu[index],
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -131,6 +143,7 @@ class _MenuPageState extends State<MenuPage> {
               itemCount: fruitMenu.length,
               itemBuilder: (context, index) => FruitTile(
                 fruit: fruitMenu[index],
+                onTap: () => navigateToFruitDetails(index),
               ),
             ),
           ),

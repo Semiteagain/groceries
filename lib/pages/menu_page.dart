@@ -106,23 +106,24 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
           const SizedBox(
-            height: 25,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.white),
+                    borderSide: const BorderSide(color: Colors.white),
                     borderRadius: BorderRadius.circular(20),
                   ),
+                  hintText: "Search here ...",
                   enabledBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.white),
                       borderRadius: BorderRadius.circular(20))),
             ),
           ),
           const SizedBox(
-            height: 25,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
@@ -130,12 +131,12 @@ class _MenuPageState extends State<MenuPage> {
               'Fruit menu',
               style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  fontSize: 18,
+                  fontSize: 16,
                   color: Colors.grey[800]),
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 5,
           ),
           Expanded(
             child: ListView.builder(
@@ -148,13 +149,17 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
           const SizedBox(
-            height: 25,
+            height: 15,
           ),
           Container(
             decoration: BoxDecoration(
                 color: Colors.grey[100],
                 borderRadius: BorderRadius.circular(20)),
-            margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+            margin: const EdgeInsets.only(
+              left: 25,
+              right: 25,
+              bottom: 10,
+            ),
             padding: const EdgeInsets.all(20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -163,7 +168,7 @@ class _MenuPageState extends State<MenuPage> {
                   children: [
                     Image.asset(
                       IntroConstants.introImage,
-                      height: 40,
+                      height: 60,
                     ),
                     const SizedBox(
                       width: 20,

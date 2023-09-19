@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:groceries/constants/intro_page_constant.dart';
+import 'package:groceries/theme/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
@@ -16,8 +17,7 @@ class MyButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-            color: IntroConstants.buttonColor,
-            borderRadius: BorderRadius.circular(40)),
+            color: secondaryColor, borderRadius: BorderRadius.circular(40)),
         padding: const EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,

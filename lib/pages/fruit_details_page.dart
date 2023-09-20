@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:groceries/components/button.dart';
 import 'package:groceries/models/fruits.dart';
 import 'package:groceries/theme/colors.dart';
+import 'package:provider/provider.dart';
+
+import '../models/shop.dart';
 
 class FruitDetailsPage extends StatefulWidget {
   final Fruit fruit;
@@ -29,7 +32,39 @@ class _FruitDetailsPageState extends State<FruitDetailsPage> {
     });
   }
 
-  void addToCart() {}
+  void addToCart() {
+    if (quantityCount > 0) {
+      final shop = context.read<Shop>();
+
+      shop.addToCart(widget.fruit, quantityCount);
+
+      showDialog(
+        barrierDismissible: false,
+        context: context,
+        builder: (context) => AlertDialog(
+          backgroundColor: primaryColor,
+          content: const Text(
+            "SucessFully added to cart",
+            style: TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
+          ),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.done,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -134,7 +169,7 @@ class _FruitDetailsPageState extends State<FruitDetailsPage> {
                           child: Center(
                             child: Text(
                               quantityCount.toString(),
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
                                 fontSize: 18,

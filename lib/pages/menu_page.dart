@@ -38,17 +38,19 @@ class _MenuPageState extends State<MenuPage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey[800],
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
-          color: Colors.grey[900],
-        ),
-        title: Text(
+        leading: const Icon(Icons.menu),
+        title: const Text(
           IntroConstants.introTitle,
-          style: TextStyle(
-            color: Colors.grey[900],
-          ),
         ),
+        actions: [
+          IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/cartpage');
+              },
+              icon: const Icon(Icons.shopping_cart))
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
